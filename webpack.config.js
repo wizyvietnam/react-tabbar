@@ -16,7 +16,7 @@ const socketPort = port + 1; //it is used for webpack-hot-client
 let webpackConfig = {
   mode: devMode ? 'development' : 'production',
   entry: {
-    app: ['./src/main.jsx']
+    app: ['./src/main.js']
   },
 
   output: {
@@ -51,7 +51,7 @@ let webpackConfig = {
         use: [{
           loader: 'babel-loader',
           options: {
-            presets: [ 'react', 'env' ],
+            presets: [ 'env', 'react', 'stage-2' ],
             plugins: devMode ? ['react-hot-loader/babel'] : []
           } 
         }]
